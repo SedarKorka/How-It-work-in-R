@@ -1,0 +1,30 @@
+---
+title: "linear_regretion"
+author: "Diallo Mamadou Korka"
+date: "2022-11-25"
+output: html_document
+---
+#library
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+#Import dataset mtcars
+```{r}
+data("mtcars")
+head(mtcars)
+attach(mtcars)
+
+```
+
+#Simple linear regretion plot and display
+```{r}
+ggplot(mtcars, aes(x= wt, y=mpg,))+
+  geom_point()
+  
+lReg<-lm(mpg~wt, data=mtcars)
+lReg
+
+summary(lReg)
+
+```
